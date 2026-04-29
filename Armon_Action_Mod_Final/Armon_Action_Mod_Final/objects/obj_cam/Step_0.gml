@@ -1,7 +1,4 @@
-p1 = instance_find(obj_player, 0);
-
-x = p1.x;
-y = p1.y + 100;
-
-
-
+if(keyboard_check_pressed(ord("H"))){
+	alarm[0] = shake_time;
+	
+}

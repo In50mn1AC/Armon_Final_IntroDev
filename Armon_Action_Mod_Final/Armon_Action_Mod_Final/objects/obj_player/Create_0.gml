@@ -1,3 +1,4 @@
+fall = true;
 shake_screen = 5;
 sprite_index = spr_player;
 

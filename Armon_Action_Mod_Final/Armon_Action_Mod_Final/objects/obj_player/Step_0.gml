@@ -53,7 +53,7 @@ function respawn(){
 	audio_play_sound(time_stop, 1, 0);
 	}
 	//die = true;
-	obj_block.fall = false;
+	fall = false;
 	//death_vel = -10
 	
 
@@ -122,7 +122,7 @@ while(to_move_y != 0 and win = false){
 			colliding = true;
 			
 			if(die = true){
-			obj_block.fall = false;
+			fall = false;
 			}
 			gravA = 0;
 			die = false;
@@ -130,7 +130,7 @@ while(to_move_y != 0 and win = false){
 			
 			//death_vel = 0;
 	if(keyboard_check_pressed(vk_space)){
-	sprite_index = spr_jump;
+	//sprite_index = spr_jump;
 	y_vel = jump_vel;
 	part_particles_create(parts, x, y+50, dust, 10);
 	audio_play_sound(jump, 1, 0);
@@ -146,7 +146,7 @@ while(to_move_y != 0 and win = false){
 			
 			
 			if(keyboard_check_pressed(vk_space)){
-			sprite_index = spr_jump;
+			//sprite_index = spr_jump;
 			y_vel = jump_vel;
 			part_particles_create(parts, x, y+ 50, dust, 100);
 			audio_play_sound(jump, 1, 0);
@@ -159,7 +159,21 @@ while(to_move_y != 0 and win = false){
 	if(!colliding){
 		y += dir;
 		to_move_y -= dir;
-		sprite_index = spr_jump
+		if(keyboard_check(ord("A")) and die = false){
+			sprite_index = spr_player_run;
+			image_xscale =  -2.5;
+	
+	
+		}
+//else{squish_speed = 0}
+
+		else if(keyboard_check(ord("D")) and die = false){
+			sprite_index = spr_player_run;
+			image_xscale = 2.5;
+	
+		}
+		
+		else{sprite_index = spr_jump}
 		
 	//image_index = 1;	
 	
@@ -183,8 +197,8 @@ function restart(){
 	x = start_x;
 	y = start_y;
 	obj_background.image_index = 1;
-	obj_block.fall = true;
-	obj_block.x = -100;
+	fall = true;
+	//obj_block.x = -100;
 	sprite_index = spr_player;
 	win = false
 	stop = false
@@ -197,7 +211,7 @@ if(win = true){
 	audio_play_sound(shatter, 1, 0);
 	stop = true;
 	}
-	obj_block.fall = false;
+	fall = false;
 	show_debug_message("WINNNN")
 	
 	

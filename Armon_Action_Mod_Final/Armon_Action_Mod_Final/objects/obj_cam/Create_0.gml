@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+shake_screen = 10;
+shake_time = 5;
 
 
 

@@ -1,6 +1,6 @@
 vert = 1;
 wait = 0;
-fall = true;
+//fall = true;
 max_speed = 20;
 frames = 0;
 frames_bf = 120;

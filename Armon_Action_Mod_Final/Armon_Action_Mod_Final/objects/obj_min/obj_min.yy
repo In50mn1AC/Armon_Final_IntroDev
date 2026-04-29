@@ -1,8 +1,11 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_cam",
-  "spriteId": null,
+  "name": "obj_min",
+  "spriteId": {
+    "name": "spr_min",
+    "path": "sprites/spr_min/spr_min.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -24,7 +27,6 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
