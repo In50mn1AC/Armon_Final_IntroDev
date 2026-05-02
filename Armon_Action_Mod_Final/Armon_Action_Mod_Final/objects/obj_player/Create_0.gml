@@ -10,6 +10,10 @@ start_y = 200//1200
 x = start_x;
 y = start_y;
 
+history = [];
+max_history = room_speed * 5;
+sprite = 0;
+
 move = 0;
 gravA = 0;
 death_vel = 0;

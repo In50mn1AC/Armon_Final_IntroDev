@@ -51,7 +51,7 @@ if(vert > max_speed){
 //vert = 1;
 //}
 
-if(instance_place(x, y, obj_ground) or y > 1600){
+if(instance_place(x, y, obj_ground)){
 instance_destroy();	
 }
 

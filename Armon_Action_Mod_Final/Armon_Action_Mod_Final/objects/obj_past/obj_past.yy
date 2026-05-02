@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_past",
-  "spriteId": {
-    "name": "spr_head",
-    "path": "sprites/spr_head/spr_head.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,

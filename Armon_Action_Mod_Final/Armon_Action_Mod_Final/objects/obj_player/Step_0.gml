@@ -12,6 +12,8 @@ r_x -= to_move_x;
 var dir = sign(to_move_y);
 var dirX = sign(to_move_x);
 
+
+
 x += to_move_x;
 x_vel *= 0.9;
 gravA = grav;
@@ -58,15 +60,27 @@ function respawn(){
 	
 
 	
-	die = true
-	if(die = true){
+	//die = true
+	//if(die = true){
 		
-		y_vel = 10;
+	//	y_vel = 10;
 		
-	}
+	//}
+	//rewinding = true;
+	
 	
 }
-
+//if (rewinding) {
+//    if (rewind_index < array_length(history)) {
+//        var past = history[rewind_index];
+//        x = past[0];
+//        y = past[1];
+		
+//        rewind_index++;
+//    }
+//        rewinding = false;
+    
+//}
 if(keyboard_check(ord("T"))){
 	//respawn();
 		win = true;
@@ -94,9 +108,7 @@ if(to_move_x >= dist_to_r_wall) {
 
 	x += to_move_x;
 }
-
-
-
+//past frame data
 
 
 while(to_move_y != 0 and win = false){
@@ -226,5 +238,19 @@ if(win = true){
 	}
 }
 
+var frame = {
+	x: x,
+	y: y,
+	image_xscale: image_xscale,
+	sprite: sprite_index,
+	image_index: image_index
+	
+};
+
+array_push(history, frame);
+
+	if(array_length(history) > max_history) {
+		array_delete(history, 0, 1);
+}
 
 
