@@ -1,9 +1,13 @@
 
 frames_bf = 30;
+frames_bf2 = 30;
+
 max_blocks = 5
+max_blocks2 = 5
 //max_scissors = 3;
 //max_paper = 3;
 frames_inc = 0;
+frames_inc2 = 0;
 
 my_val = 0;
 

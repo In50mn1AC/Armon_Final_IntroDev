@@ -1,7 +1,7 @@
 //sec += 1;
 
 //if(sec >= 60){
-//image_angle -= 15	
+//image_angle -= 1;	
 //sec = 0;
 //}
 image_angle -= move;
@@ -16,5 +16,5 @@ if(obj_player.win = true){
 
 if(obj_player.fall = true){ 
 	image_index = 0;
-	move = 0.5;
+	move = 0.05;
 }
