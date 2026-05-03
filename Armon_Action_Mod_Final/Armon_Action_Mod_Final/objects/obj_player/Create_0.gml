@@ -11,7 +11,11 @@ x = start_x;
 y = start_y;
 
 history = [];
-max_history = room_speed * 5;
+max_history = room_speed * 2;
+rewind = false;
+//rewind_progress = 0;
+//rewind_index = array_length(history) -1;
+
 sprite = 0;
 
 move = 0;

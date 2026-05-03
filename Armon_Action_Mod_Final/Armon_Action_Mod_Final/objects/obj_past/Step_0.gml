@@ -14,6 +14,8 @@
 //    y = past[1];
 	
 //}
+
+
 image_alpha = 0.6;
 if (instance_exists(target)) {
     var hist = target.history;
@@ -29,4 +31,14 @@ if (instance_exists(target)) {
 		
     }
 }
+if (keyboard_check_pressed(ord("L"))){
+	var hist = target.history;
+	var frame = hist[array_length(hist) - rewind_frames];
+	//rewind_frames = room_speed * 2;
+	
+}
+else{
+	//rewind_frames = room_speed * 1;
+}
+//show_debug_message(x);
 

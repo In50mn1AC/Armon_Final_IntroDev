@@ -18,7 +18,7 @@ x += to_move_x;
 x_vel *= 0.9;
 gravA = grav;
 y_vel += gravA;
-if(keyboard_check(ord("A")) and die = false){
+if(keyboard_check(ord("A")) and die = false and rewind = false){
 	sprite_index = spr_player_run;
 	image_xscale =  -2.5;
 	x_vel -= accel;
@@ -28,7 +28,7 @@ if(keyboard_check(ord("A")) and die = false){
 }
 //else{squish_speed = 0}
 
-if(keyboard_check(ord("D")) and die = false){
+if(keyboard_check(ord("D")) and die = false and rewind = false){
 	sprite_index = spr_player_run;
 	image_xscale = 2.5;
 	x_vel += accel;
@@ -36,7 +36,7 @@ if(keyboard_check(ord("D")) and die = false){
 	moving = true;
 }
 
-if(keyboard_check_pressed(ord("F")) and win = false){
+if(keyboard_check_pressed(ord("F")) and win = false and rewind = false){
 
 	part_type_sprite(clock, spr_clock,false, false, false);
 	part_type_size(clock, 0.05, 10, 1, 0);
@@ -58,28 +58,36 @@ function respawn(){
 	fall = false;
 	//death_vel = -10
 	
+	rewind = true;
 
-	
-	//die = true
-	//if(die = true){
-		
-	//	y_vel = 10;
-		
-	//}
-	//rewinding = true;
 	
 	
 }
-//if (rewinding) {
-//    if (rewind_index < array_length(history)) {
-//        var past = history[rewind_index];
-//        x = past[0];
-//        y = past[1];
+
+
+	//if(rewind = true){
+	//	show_debug_message(rewind_progress)
+	//	rewind_progress += 0.1;
+	//	lerp(x, obj_past.x, rewind_progress);
+	//	lerp(y, obj_past.y, rewind_progress);
 		
-//        rewind_index++;
-//    }
-//        rewinding = false;
-    
+		
+	//	rewind = false;
+	//	rewind_progress = 0;
+	//}
+	
+	
+//	if (rewind = true) {
+//		if (rewind_index > 0) {
+//			var frame = history[rewind_index];
+
+//			x = frame.x;
+//			y = frame.y;
+	
+//			rewind_index -= 3; // speed (higher = faster rewind)
+//	 } else {
+//		 rewind = false;
+//		}
 //}
 if(keyboard_check(ord("T"))){
 	//respawn();
@@ -111,7 +119,7 @@ if(to_move_x >= dist_to_r_wall) {
 //past frame data
 
 
-while(to_move_y != 0 and win = false){
+while(to_move_y != 0 and win = false and rewind = false){
 	var colliding = false;
 	var collide_with = noone;
 	var collide_with2 = noone;
@@ -253,4 +261,51 @@ array_push(history, frame);
 		array_delete(history, 0, 1);
 }
 
+//if(keyboard_check(ord("L"))){
+	
+//	lerp(x, frame[0], 0.5);
+//	lerp(y, frame[1], 0.5);
+	
+//}
+//var frame = [x, y];
 
+//array_push(history, frame);
+
+//if (array_length(history) > max_history) {
+//    array_delete(history, 0, 1);
+//}
+//if (rewind) {
+
+//    rewind_index -= 2;
+
+//    if (rewind_index <= 0) {
+//        rewind = false;
+      
+//    }
+
+//    var frame = history[rewind_index];
+
+//    x = frame[0];
+//    y = frame[1];
+//}
+
+//if (keyboard_check_pressed(ord("L"))) {
+//    rewind = true;
+//    rewind_index = array_length(history) - 1;
+	
+//}
+if(rewind = true){
+	x = lerp(x, obj_past.x, 0.1);	
+	//x = obj_past.x;
+	y = lerp(y, obj_past.y, 0.1);	
+	array_delete(history, 0, 120);
+	if(point_distance(x ,y ,obj_past.x, obj_past.y)<5){
+	rewind = false;
+	}
+}
+
+if (keyboard_check_pressed(ord("L"))) {
+	rewind = true;
+
+}
+//show_debug_message(array_length(history))

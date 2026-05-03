@@ -18,3 +18,7 @@ if(obj_player.fall = true){
 	image_index = 0;
 	move = 0.05;
 }
+
+if(obj_player.rewind = true){
+	move = -0.05;	
+}
