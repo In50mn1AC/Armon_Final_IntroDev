@@ -1,4 +1,6 @@
-
+if(obj_tut.start = true){
+	visible = true;	
+}
 x = obj_player.x;
 y = obj_player.y ;
 

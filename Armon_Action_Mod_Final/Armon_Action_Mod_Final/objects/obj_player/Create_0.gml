@@ -1,3 +1,4 @@
+visible = false;
 fall = true;
 shake_screen = 5;
 sprite_index = spr_player;
@@ -5,10 +6,12 @@ sprite_index = spr_player;
 die = false;
 win = false;
 stop = false;
-start_x = 500//50
-start_y = 200//1200
+start_x = 700//50
+start_y = 500//1200
 x = start_x;
 y = start_y;
+
+wait = 0;
 
 history = [];
 max_history = room_speed * 2;

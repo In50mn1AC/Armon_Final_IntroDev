@@ -1,5 +1,6 @@
 sprite_index = spr_player;
-
+if(obj_tut.start = true){
+visible = true;
 r_y += y_vel;
 r_x += x_vel;
 
@@ -209,14 +210,14 @@ while(to_move_y != 0 and win = false and rewind = false){
 	
 }
 
-if(y <= 0){
+if(instance_place(x,y,obj_self)){
 	win = true;
 	
 }
 function restart(){
 	x = start_x;
 	y = start_y;
-	obj_background.image_index = 1;
+	obj_background.sprite_index = spr_background;
 	fall = true;
 	//obj_block.x = -100;
 	sprite_index = spr_player;
@@ -294,18 +295,22 @@ array_push(history, frame);
 //    rewind_index = array_length(history) - 1;
 	
 //}
+show_debug_message(wait)
+wait++;
 if(rewind = true){
 	x = lerp(x, obj_past.x, 0.1);	
 	//x = obj_past.x;
 	y = lerp(y, obj_past.y, 0.1);	
 	array_delete(history, 0, 120);
-	if(point_distance(x ,y ,obj_past.x, obj_past.y)<5){
+	if(point_distance(x ,y ,obj_past.x, obj_past.y)<5 and wait >= 30){
 	rewind = false;
+	wait = 0
 	}
 }
-
-if (keyboard_check_pressed(ord("L"))) {
-	rewind = true;
-
 }
+
+//if (keyboard_check_pressed(ord("L"))) {
+//	rewind = true;
+
+//}
 //show_debug_message(array_length(history))

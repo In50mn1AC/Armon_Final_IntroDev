@@ -1,4 +1,4 @@
-
+if(obj_tut.start = true){
 var num_blocks = instance_number(obj_block);
 var num_blocks2 = instance_number(obj_block2);
 frames_inc += 1;
@@ -28,7 +28,7 @@ if(frames_inc > frames_bf or num_blocks < 1){
 	}
 	frames_inc = 0;
 }
-
+}
 //if(frames_inc2 > frames_bf2 or num_blocks2 < 1){
 //	if(num_blocks2 < max_blocks2){
 //		var new_blocks2 = instance_create_layer(

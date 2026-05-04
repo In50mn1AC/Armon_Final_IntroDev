@@ -1,3 +1,4 @@
-image_index = 0;
+wait = 0;
+sprite_index = spr_backTut;
 
 

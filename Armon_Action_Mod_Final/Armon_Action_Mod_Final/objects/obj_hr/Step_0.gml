@@ -4,8 +4,10 @@
 //image_angle -= 1;	
 //sec = 0;
 //}
+if(obj_tut.start = true){
 image_angle -= move;
-
+visible = true;
+}
 if(obj_player.fall = false){
 move = 0;	
 image_index = 1;
