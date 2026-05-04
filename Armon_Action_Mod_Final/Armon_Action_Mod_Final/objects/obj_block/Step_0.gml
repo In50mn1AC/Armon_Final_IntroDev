@@ -59,5 +59,6 @@ instance_destroy();
 }
 
 if(obj_player.win = true){
-
+	//visible = false;
 }
+else{visible = true}

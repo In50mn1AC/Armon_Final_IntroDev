@@ -13,7 +13,8 @@ move = 0;
 image_index = 1;
 }
 if(obj_player.win = true){
-	image_index = 2;	
+	image_index = 2;
+		visible = false;
 }
 
 if(obj_player.fall = true){ 
