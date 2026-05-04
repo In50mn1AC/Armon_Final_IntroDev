@@ -1,5 +1,12 @@
+
 sprite_index = spr_backTut;
 wait++
+show_debug_message(wait)
+if(wait < 10 ){
+	if(!audio_is_playing(page)){
+		audio_play_sound(page,0,0);
+	}
+}
 
 if(wait >= 40 and sprite_index = spr_backTut){
 		sprite_index = spr_backTut2;

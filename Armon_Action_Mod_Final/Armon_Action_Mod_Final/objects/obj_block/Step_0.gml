@@ -1,4 +1,5 @@
 //show_debug_message(wait)
+show_debug_message(depth)
 image_speed = 3;
 //var num_blocks = instance_number(obj_block);
 //frames += 1;

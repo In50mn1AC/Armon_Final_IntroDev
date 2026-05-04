@@ -37,6 +37,7 @@
     {"id":{"name":"jump","path":"sounds/jump/jump.yy",},"order":2,},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"order":0,},
     {"id":{"name":"spr_backTut2","path":"sprites/spr_backTut2/spr_backTut2.yy",},"order":17,},
+    {"id":{"name":"page","path":"sounds/page/page.yy",},"order":3,},
     {"id":{"name":"spr_space","path":"sprites/spr_space/spr_space.yy",},"order":14,},
     {"id":{"name":"ground","path":"tilesets/ground/ground.yy",},"order":0,},
     {"id":{"name":"spr_backTut","path":"sprites/spr_backTut/spr_backTut.yy",},"order":16,},

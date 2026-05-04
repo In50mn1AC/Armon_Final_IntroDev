@@ -4,6 +4,8 @@
 //image_angle -= 15	
 //sec = 0;
 //}
+
+depth = 99;
 if(obj_tut.start = true){
 image_angle -= move;
 visible = true;

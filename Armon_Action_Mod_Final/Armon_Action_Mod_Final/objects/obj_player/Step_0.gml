@@ -295,7 +295,7 @@ array_push(history, frame);
 //    rewind_index = array_length(history) - 1;
 	
 //}
-show_debug_message(wait)
+
 wait++;
 if(rewind = true){
 	x = lerp(x, obj_past.x, 0.1);	
@@ -306,6 +306,9 @@ if(rewind = true){
 	rewind = false;
 	wait = 0
 	}
+}
+if(rewind = true and place_meeting = true){
+	x+= 50;
 }
 }
 
