@@ -5,7 +5,7 @@ if(keyboard_check_pressed(vk_space) and start = false){
 	
 }
 
-if(image_index = 3){
+if(image_index = 6){
 	start = true;
 	visible = false;
 }

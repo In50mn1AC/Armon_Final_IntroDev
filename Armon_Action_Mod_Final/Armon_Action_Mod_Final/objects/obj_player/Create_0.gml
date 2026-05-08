@@ -7,7 +7,7 @@ die = false;
 win = false;
 stop = false;
 start_x = 700//50
-start_y = 500//1200
+start_y = 1500//1200
 x = start_x;
 y = start_y;
 

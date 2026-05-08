@@ -124,8 +124,12 @@ while(to_move_y != 0 and win = false and rewind = false){
 	var colliding = false;
 	var collide_with = noone;
 	var collide_with2 = noone;
+	var collide_with3 = noone;
+	var collide_with4 = noone;
 	collide_with = instance_place(x, y + dir, obj_ground );
-	collide_with2 = instance_place(x + dirX, y + dir, obj_block );
+	collide_with2 = instance_place(x + dirX, y + dir, obj_block);
+	collide_with3 = instance_place(x + dirX, y + dir, obj_block2);
+	collide_with4 = instance_place(x + dirX, y + dir, obj_block2);
 
 		if (place_meeting(x + x_vel, y, obj_block))
 {
@@ -137,7 +141,7 @@ while(to_move_y != 0 and win = false and rewind = false){
 	//x -= sign(x_vel);
 	x_vel = 0;
 }
-	if(collide_with != noone or collide_with2 != noone){
+	if(collide_with != noone or collide_with2 != noone or collide_with3 != noone or collide_with4 != noone){
 		
 		if((place_meeting(x, y, collide_with) == false  )){
 			colliding = true;
@@ -161,7 +165,7 @@ while(to_move_y != 0 and win = false and rewind = false){
 }
 
 		}
-		if(place_meeting(x, y, collide_with2) == false and die = false){
+		if(place_meeting(x, y, collide_with2 or collide_with3 or collide_with4) == false and die = false){
 			colliding = true;
 			gravA = 0;
 			
@@ -215,6 +219,11 @@ if(instance_place(x,y,obj_self)){
 	
 }
 function restart(){
+	if(!audio_is_playing(time_stop)){
+	audio_play_sound(time_stop, 1, 0);
+	}
+	obj_min.image_angle = 90;
+	obj_hr.image_angle = 0;
 	x = start_x;
 	y = start_y;
 	obj_background.sprite_index = spr_background;
@@ -225,6 +234,9 @@ function restart(){
 	stop = false
 	gravA = grav;
 	y_vel += gravA;
+	instance_destroy(obj_block);
+	instance_destroy(obj_block2);
+	//instance_destroy(obj_block);
 	
 }
 if(win = true){
@@ -240,12 +252,14 @@ if(win = true){
 	sprite_index = spr_win;
 	
 	x = 683;
-	y = 750;
+	y = 1200;
 	
-	if(keyboard_check_pressed(ord("R"))){
+	
+}
+
+if(keyboard_check_pressed(ord("R"))){
 	restart();	
 	}
-}
 
 var frame = {
 	x: x,
@@ -312,8 +326,8 @@ if(rewind = true and place_meeting = true){
 }
 }
 
-//if (keyboard_check_pressed(ord("L"))) {
-//	rewind = true;
+if (keyboard_check_pressed(ord("L"))) {
+	rewind = true;
 
-//}
+}
 //show_debug_message(array_length(history))

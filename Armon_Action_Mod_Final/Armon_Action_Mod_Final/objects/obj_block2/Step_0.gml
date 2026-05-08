@@ -51,12 +51,17 @@ if(vert > max_speed){
 //vert = 1;
 //}
 
-if(instance_place(x, y, obj_ground) or y > 1600){
+if(instance_place(x, y, obj_ground)){
+obj_cam.alarm[0] = obj_cam.shake_time;
+if(!audio_is_playing(rock)){
+	audio_play_sound(rock , 0 ,0);
+}
 instance_destroy();	
 }
 
 }
 
 if(obj_player.win = true){
-
+	visible = false;
 }
+else{visible = true}

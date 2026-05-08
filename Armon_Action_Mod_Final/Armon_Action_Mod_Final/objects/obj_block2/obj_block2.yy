@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_block2",
   "spriteId": {
-    "name": "spr_head",
-    "path": "sprites/spr_head/spr_head.yy",
+    "name": "spr_block2",
+    "path": "sprites/spr_block2/spr_block2.yy",
   },
   "solid": false,
   "visible": true,
@@ -29,7 +29,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"grav","varType":0,"value":"0.4","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"grav","varType":0,"value":"1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],},
   ],
   "overriddenProperties": [],
   "parent": {
